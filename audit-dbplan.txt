@@ -1,0 +1,156 @@
+
+
+
+1. contents table:
+
+id, cat_id, sub_cat_id, child_cat_id, type,
+
+            about us
+//:team
+name, designation, short_description, long_description,email,phone, experience, image, image2, image3,,image4, image5,image6,logo,
+//
+company profile:
+// title, file(pdf,doc), youtube,
+
+new sticker:
+subtitle,doc_upload
+
+// career:
+job_title,vacancy,age,education, experience, responsibilities,compensation,
+employment_status, location
+
+event:
+date,time,venue
+
+
+//
+
+2. blog table
+// title,date,uploaded_by,blog_category,comment,long_description,short_description,blockquote,image,tags
+
+3. blog_category_table
+blog_cat_name
+
+
+4. registers_table
+type(1=event,2=professtional,3=articleship,4=contact,5=pdf_download),
+type_id,type_name,name,email,phone,address,others,doc_file,service_type,long_description
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+============== Crud form: ======================
+1. page setup crud:
+category_id, subcats_id, title, short_description,image,image2,image3, type(1) // done
+
+===about us==
+
+2. Company profile:
+cat_id, sub_cat_id, title, file(pdf,doc),image, youtube,short_description,long_description, //(done)
+
+
+3. team:
+cat_id, sub_cat_id,name, designation, specialization,short_description, email,phone, experience, image, facebook, twitter, instagram  //(done)
+
+4. affiliation:
+cat_id, sub_cat_id, title, long_description,image, link //(done)
+
+5. enlistment:
+cat_id, sub_cat_id, title, name, logo, link //(done)
+
+6. membership:
+cat_id, sub_cat_id, title,long_description,image, logo, link //(done)
+
+====services===
+
+7. name,short_description , cat_id, sub_cat_id   // 1 crud  (Done)  [ logo, link]
+
+
+======== client =========
+8. cat_id, sub_cat_id, name, logo, image, // (done)
+
+====== Media  =========
+
+9. newsletter/e-bulletin,new sticker:
+cat_id, sub_cat_id, title, subtitle,short_description, long_description, image,file_upload(pdf,doc)  // (done)
+
+10. publications:
+cat_id, sub_cat_id,title, doc_upload // (done)
+
+11. gallary:
+cat_id, sub_cat_id,title, short_description, image,image2,image3,image4, image5,image6
+
+12. events:
+cat_id, sub_cat_id, title, long_description, image, doc_upload,date,time,venue (done)
+
+========= career =========
+13. Professional & articleship:
+cat_id, sub_cat_id, job_title,vacancy,age,education, experience, responsibilities,compensation,
+employment_status, location,date(deadline), (done)
+
+14. regulators:
+cat_id, title,long_description,image,logo, link ,(done)
+
+15. contact us:
+cat_id, title,location,phone,email, link(map) (done)
+
+
+
+### Registration form:
+
+16. event: name,email,phone,address, hidden(type_id,type_name,type=1)
+
+//professional: name,email,phone,doc_file, hidden(type_id,type_name,type=2)
+//articleship: name,email,phone,doc_file, hidden(type_id,type_name,type=3)
+//contact:name,email,phone,service_type,long_description,hidden(type=4)
+/publicationp-Download: name,email,phone, hidden(type_id,type_name,type=5)
+
+
+
+17. blog:
+blog_cat_name, title,date,uploaded_by,comment,long_description,short_description,blockquote,image,tags // (Done)
+
+18. blog_category
+blog_cat_name // (Done)
+
+
+19. categories table // (Done)
+category_name
+
+20. sub_categories table // (Done)
+cat_id, sub_cat_name,
+
+
+

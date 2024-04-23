@@ -1,0 +1,6 @@
+1.Category and subcategory  set mannualy
+
+2. contents table:  Company profile Id = 1, cat_id = 1, sub-cat=1 Fixed
+3. theme_options table:  Id = 1, Fixed
+4. whoweares table:   Id = 1, Fixed
+

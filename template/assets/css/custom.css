@@ -1,0 +1,360 @@
+.header-style-two .navbar-wrap ul li a {
+    padding: 15px 6px;
+}
+.logo img {
+    max-height: 30px;
+   
+}
+
+ @media (max-width: 1200px) {
+
+    .header-style-two .navbar-wrap ul li a {
+   padding: 32px 8px;
+}
+}
+@media (max-width: 1048px) {
+    .logo img {
+        max-height: 23px !important;
+    }
+    .header-style-two .navbar-wrap ul li a {
+        padding: 15px 3px;
+    }
+    .logo img {
+        max-height: 30px;
+       
+    }
+}
+
+@media (max-width: 720px){
+    .logo img {
+        max-height: 30px;
+        margin-top: 15px;
+    }
+     }
+ /* slider start */
+.slidercaption{
+    top: 230px;
+    width: 85%;
+}
+.sliderbtn{
+    width: 50%;
+   margin: 50px auto;
+}
+
+    /* Slider Zoom Effect */
+    @-webkit-keyframes zoom {
+        from {
+          -webkit-transform: scale(1, 1);
+        }
+        to {
+          -webkit-transform: scale(1.5, 1.5);
+        }
+      }
+      
+      @keyframes zoom {
+        from {
+          transform: scale(1, 1);
+        }
+        to {
+          transform: scale(1.5, 1.5);
+        }
+      }
+      
+      .carousel-inner .carousel-item > img {
+        -webkit-animation: zoom 20s;
+        animation: zoom 20s;
+      }
+.headertop_border{
+    border-left: 1px solid #fff;
+}
+
+/* news sticker  */
+.news-container {
+   
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.news-container .title {
+    position: absolute;
+    background: #df2020;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+    width: 15%;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 25s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: #494949;
+    position: relative;
+    font-weight: bold;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.news-container ul:hover{
+    animation-play-state: paused;
+    text-decoration: underline;
+}
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+    }
+}
+/* team memberstart  */
+  .meetteam img{
+    width: 100%;
+  }
+/* affiliation page  */
+.affialation-item{
+    min-height: 470px;
+}
+.membership a img{
+    width: 100%;
+}
+.iakservice{
+    width: 100%;
+    min-height: 390px;
+}
+.iakservice img{
+    height: 100%;
+}
+.slideicon{
+    background-color: #0b6777;
+    color: #fff;
+}
+.virtualtitle{
+    width: 63%;
+    background-color: #fff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: relative;
+    top: 150px;
+    padding: 1px 17px;
+
+}
+.virtualtitle h1{
+    color: red;
+}
+.partner{
+    width: 230px;
+    height: 230px;
+    border-radius: 50px;
+}
+.partner img{
+    width: 100%;
+}
+
+/* media queries */
+@media (max-width: 425.98px) { 
+    .news-container .title {
+      
+        width: 40%!important;
+       
+    }
+    .slidercaption {
+        top: 20px!important;
+    }
+    .banner-content-two .title {
+        font-size: 20px!important;
+       
+    }
+
+}
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .chatbot{
+        right: 2px!important;
+        bottom:72px!important;
+    }
+    .chatbot img{
+        width: 40px;
+        height: 40px;
+        border-radius:50%;
+    }
+    .slidercaption {
+        top: 14px;
+    }
+    .banner-content-two p{
+        font-size: 13px;
+    }
+    .banner-content-two .title {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .banner-content-two p {
+        font-size: 14px;
+    }
+    .news-container .title {
+        height: 4%;
+        font-size: 13px;
+       
+    }
+    h5.section-title h1{
+        font-size: 26px;
+    }
+    .estimate-form-wrap h1{
+        font-size: 26px;
+    }
+    .virtualtitle {
+        width: 83%;
+        top: 175px;
+        padding: 1px 7px;
+    }
+    .virtualtitle h1 {
+        font-size: 25px;
+    }
+    .about-area-six {
+        padding: 0 0 34px;
+    }
+    .team-bg {
+        padding: 0px 0 6px;
+    }
+    .services-area-three {
+        padding: 0px 0 70px;
+    }
+   .banner-follow-wrap {
+        display: block;
+        top: 38%;
+        right: -10px;
+        width: 42px;
+        padding: 10px;
+        border-radius: 10px;
+    
+    }
+    .banner-follow-wrap .list-wrap{
+        display: none;
+    }
+ }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+   
+    .slidercaption {
+        top: 90px;
+        width: 85%;
+    }
+    .banner-content-two .title {
+        font-size: 31px;
+    }
+    .news-container .title {
+        height: 8%;
+        width: 30%;
+       
+    }
+    .blog-post-content-four .tag {
+        font-size: 12px;
+    }
+    .blog-post-content-four .title {
+        font-size: 18px;
+    }
+ }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .slidercaption {
+        top: 120px;
+        width: 85%;
+    }
+    .banner-content-two .title {
+        font-size: 42px;
+    }
+    .news-container .title {
+        height: 6%;
+        width: 23%;
+    }
+.services-bg-two{
+        padding: 0px 0px 0px;
+}
+section.blog-area-four{
+    
+padding-top: 0px;
+}
+.footer-top-two{
+    padding: 0px 0px 0px;
+}
+}
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+    /* .news-container .title {
+        height: 10%;
+        width: 15%;
+    } */
+ }
+
+.whatsapp{
+    background-color: #0b6777;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    z-index: 999;
+    color: #fff;
+    padding: 10px;
+    left: 20px;
+    bottom: 15px;
+    border-radius: 28px;
+    font-size: 20px;
+    width: 42px;
+    height: 42px;
+    line-height: 22px;
+    text-align: center;
+}
+.whatsapp a{
+    color: #fff; 
+}
+.chatbot{
+
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    z-index: 999;
+    color: #fff;
+    padding: 10px;
+    right: 56px;
+    bottom: 20px;
+   
+}
+.chatbot img{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+}
+.listwraplocation a i{ 
+    transform: translateY(-50%) rotate(90deg);
+    flex-direction: row-reverse;
+    text-align: center;
+}
