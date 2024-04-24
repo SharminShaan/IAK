@@ -38,23 +38,22 @@
                 </div>
             </div>
             <div class="services-item-wrap">
+                @foreach ($regulators as $regulator)
+
                 <div class="services-item-six" data-aos="fade-up" data-aos-delay="400">
                     <div class="services-thumb-six">
-                        <a href="https://nbr.gov.bd/"><img src="{{ asset('frontend/assets/images/regulators/regulators.jpg')}}" alt="IAK NBR"></a>
+                        <a href="{{ $regulator->link }}"><img src="{{ asset('/backendsite/regulateimg/' . $regulator->image)}}" alt="regulateimg"></a>
                     </div>
                     <div class="services-content-six">
                         <div class="services-content-six-top">
-                            <h2 class="title"><a target="_blank" href="https://nbr.gov.bd/">The National Board of Revenue (NBR) </a></h2>
+                            <img class="circle" src="{{ asset('/backendsite/regulateimg/' . $regulator->logo) }}"  width="80"  alt="finance_logo">
+                            <h2 class="title"><a target="_blank" href=" {{ $regulator->link }} "> {{ $regulator->title }} </a></h2>
                         </div>
-                        <p>The main responsibility of NBR is to collect domestic revenue (primarily, taxes) for the
-                            government. It administers various taxes including income tax, value-added tax (VAT), customs
-                            duties, and other forms of indirect taxes.</p>
-                        <p>The NBR plays a crucial role in the fiscal policies of the government of Bangladesh and is
-                            responsible for ensuring compliance with tax laws and regulations. It implements tax policies,
-                            conducts audits, and takes enforcement actions against tax evasion.</p>
+                        <p> {{ $regulator->long_description }} </p>
                     </div>
-                </div>
-                <div class="services-item-six" data-aos="fade-up" data-aos-delay="400">
+                </div> <hr>
+                @endforeach
+                {{-- <div class="services-item-six" data-aos="fade-up" data-aos-delay="400">
                     <div class="services-thumb-six">
                         <a href="https://roc.gov.bd/"><img src="{{ asset('frontend/assets/images/regulators/rjsc.jpg')}}" alt="IAK RJSC"></a>
                     </div>
@@ -72,7 +71,7 @@
                             It plays a crucial role in ensuring transparency, accountability, and legal compliance within
                             the corporate sector.</p>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>

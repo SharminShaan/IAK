@@ -49,8 +49,10 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Logo</label>
                                 <input type="file" class="form-control" name="logo"> <br>
+                                <small>Image size: 550 x 550 px</small>
                                 <img src="{{ asset('backendsite/regulateimg/' . $data->logo) }}" alt="regulators-img"
                                     width="100">
+
                             </div>
 
                             <div class="mb-3">

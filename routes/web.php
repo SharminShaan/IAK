@@ -61,6 +61,8 @@ Route::get('/meet-our-team', [FrontendController::class, 'meetourteam']);
 Route::get('/affiliation', [FrontendController::class, 'affiliation']);
 Route::get('/enlistment', [FrontendController::class, 'enlistment']);
 Route::get('/membership', [FrontendController::class, 'membership']);
+Route::get('/standards', [FrontendController::class, 'standards']);
+Route::get('/faqs', [FrontendController::class, 'faqs']);
 // service
 Route::get('/audit-assurance', [FrontendController::class, 'auditassurance']);
 Route::get('/taxation-vat', [FrontendController::class, 'taxationvat']);
@@ -69,11 +71,14 @@ Route::get('/secretarial-licensing-compliance', [FrontendController::class, 'sec
 Route::get('/business-service', [FrontendController::class, 'businessservice']);
 Route::get('/human-resource-services', [FrontendController::class, 'humanresource']);
 Route::get('/training-development', [FrontendController::class, 'trainingdevelopment']);
+Route::get('/actuarial', [FrontendController::class, 'actuarial']);
+Route::get('/ipr', [FrontendController::class, 'ipr']);
 // client page start
 Route::get('/financial-institutions', [FrontendController::class, 'financialinstitutions']);
 Route::get('/listed-companies', [FrontendController::class, 'govtSemiGovtlistedcompanies']);
 Route::get('/foreign-client', [FrontendController::class, 'Foreignclient']);
 Route::get('/international-clients', [FrontendController::class, 'internationalclients']);
+Route::get('/all-listed-clients', [FrontendController::class, 'alllisted']);
 
 // media page start
 Route::get('/newsletter', [FrontendController::class, 'newsletter']);

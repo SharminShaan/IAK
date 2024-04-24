@@ -31,11 +31,10 @@
                 <div class="col-xl-10 col-lg-10 col-md-10  mt-5">
 
                     <div class="section-title section-title-three text-center mb-60 tg-heading-subheading animation-style1">
-                        <span class="sub-title tg-element-title">Financial Institutions</span>
-                        <h2 class="title tg-element-title">Name of Banks and Non-Banking Financial Institutions
+                        <h2 class="title tg-element-title">Bank and Non-Banking Financial Institutions
                         </h2> <br>
-                        <h6>Banking institutions include commercial banks, savings and loan associations, and credit unions.
-                            Non-banking financial institutions include insurance companies, .</h6>
+                        <h6>Banking institutions include commercial banks, savings and loan associations and credit unions.
+                            Non-banking financial institutions include insurance companies.</h6>
                     </div>
                 </div>
                 {{-- <div class="col-lg-6 col-md-10 mb-5">
@@ -66,7 +65,7 @@
                 <div class="pricing-item-wrap">
                     <div class="row ">
                         <div class="col-lg-3 col-md-3 col-sm-3"> </div>
-                        
+
                         <div class="col-lg-4 col-md-6 col-sm-10">
                             <div class="pricing-box-two ficlient">
 

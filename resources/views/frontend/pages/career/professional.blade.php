@@ -131,7 +131,7 @@
 
                 </div>
 
-                <div class="col-xl-6 col-lg-6 ">
+                {{-- <div class="col-xl-6 col-lg-6 ">
                     <div class="about-content-two">
                         <div class="section-title mb-30 tg-heading-subheading animation-style2">
                             <span class="sub-title tg-element-title">Career Professional</span>
@@ -146,7 +146,7 @@
                                     <td><a href="{{ route('event.reg.create', 1) }}"
                                             class="btn btn-info btn-sm edit">Apply</a>
                                     </td>
-                                    
+
                                 </tr>
 
                                 <tr>
@@ -154,9 +154,43 @@
                                     <td><a href="{{ route('event.reg.create', 1) }}"
                                         class="btn btn-info btn-sm edit">Apply</a>
                                 </td>
-                                </tr>
+                                </tr> --}}
 
-                                {{-- @foreach ($category as $key => $row)
+                <div class="row">
+                    @foreach ($profs as $prof)
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
+                            <div class="services-item-three">
+                                <div class="">
+                                    <ul>
+                                        <li class="title">Job Title : {{ $prof->job_title }} </li>
+                                        <li><i class="far fa-calendar"></i> Application Deadline: {{ $prof->date }} </li>
+                                        <li> Vacancy : {{ $prof->vacancy }} </li>
+                                        <li> Job Type : {{ $prof->employment_status }} </li>
+                                        <li> Job Location : {{ $prof->location }} </li>
+                                        <li> Age : {{ $prof->age }} </li>
+                                        <li> Education : {{ $prof->education }} </li>
+                                        <li> Experience : {{ $prof->experience }} </li>
+                                        <li> Compensation : {{ $prof->compensation }} </li>
+                                        <li> Job Responsibilities : {{ $prof->responsibilities }} </li>
+                                    </ul>
+
+
+
+                                    {{-- Registration --}}
+                                    <a href="{{ route('event.reg.create', 1) }}"
+                                            class="btn btn-info btn-sm edit">Apply</a>
+
+                                    <div class="overlay-icon">
+                                        <i class="flaticon-healthcare"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+
+                {{-- @foreach ($category as $key => $row)
                                     <tr>
                                         <td>{{ $row->category_name }}</td>
                                         <td>
@@ -165,11 +199,11 @@
                                         </td>
                                     </tr>
                                 @endforeach --}}
-                            </table>
+                {{-- </table>
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </div>

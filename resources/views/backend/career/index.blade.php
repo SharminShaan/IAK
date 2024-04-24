@@ -57,13 +57,11 @@
                                 <td>{{ $row->date }}</td>
                                 <td>{{ $row->location }}</td>
                                 <td>{{ $row->employment_status }}</td>
+                                <td>{{ $row->responsibilities }}</td>
                                 <td>{{ $row->age }}</td>
                                 <td>{{ $row->education }}</td>
                                 <td>{{ $row->experience }}</td>
                                 <td>{{ $row->compensation }}</td>
-                                <td>
-
-
                                 <td>
                                     <a href="{{ route('career.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
                                             class="fas fa-edit"></i></a>

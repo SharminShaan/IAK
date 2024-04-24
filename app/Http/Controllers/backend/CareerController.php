@@ -92,7 +92,7 @@ class CareerController extends Controller
 
         DB::table('contents')->where('id', $request->id)->update($data);
 
-        return redirect()->route('career.index')->with('message', 'Updated successfully');
+        return redirect()->route('career.professional')->with('message', 'Updated successfully');
     }
 
 

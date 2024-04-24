@@ -29,7 +29,8 @@
  <nav class="social">
      <ul>
          <li class="twitter">
-             <a target="_blank" href="ref"><b>ERP Login</b> <i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp;
+             <a target="_blank" href="http://103.84.36.211/myWeb01/CoronaLive"><b>Member's Login</b> <i
+                     class="fa fa-sign-in" aria-hidden="true"></i> &nbsp;
                  &nbsp; </a>
          </li>
          <li class="facebook">
@@ -50,6 +51,13 @@
                      aria-hidden="true"></i></a>
              &nbsp; &nbsp;
          </li>
+
+         <li class="instagram">
+             <a href="{{ url('faqs') }}"><b>FAQs</b> <i class="fa fa-calculator"
+                     aria-hidden="true"></i></a>
+             &nbsp; &nbsp;
+         </li>
+
      </ul>
  </nav>
 
@@ -143,6 +151,7 @@
                                                      <li> <a href="{{ url('affiliation') }}">Affiliation</a></li>
                                                      <li> <a href="{{ url('enlistment') }}">Enlistment</a></li>
                                                      <li> <a href="{{ url('membership') }}">Membership</a></li>
+                                                     <li> <a href="{{ url('standards') }}">Standards </a></li>
                                                  </ul>
                                              </li>
                                              <li>
@@ -171,8 +180,15 @@
                                                      </li>
                                                      <li> <a href="{{ url('human-resource-services') }}">Human
                                                              Resources & others Services</a></li>
+
                                                      <li> <a href="{{ url('training-development') }}">Training &
-                                                             Development</a></li>
+                                                             Development</a>
+                                                     </li>
+                                                     <li> <a href="{{ url('actuarial') }}">
+                                                        IAK Actuarial Service </a>
+                                                     </li>
+                                                     <li> <a href="{{ url('ipr') }}">IPR Service</a>
+                                                     </li>
                                                  </ul>
                                              </li>
                                              <li>
@@ -195,6 +211,8 @@
                                                      </li>
                                                      <li><a href="{{ url('foreign-client') }}">Foreign Clients</a>
                                                      </li>
+                                                     <li><a href="{{ url('all-listed-clients') }}">Listed Clients</a>
+                                                     </li>
                                                      {{-- <li><a href="{{ url('international-clients') }}">International
                                                              Clients</a>
                                                      </li> --}}
@@ -209,7 +227,7 @@
 
 
                                      </li>
-                                     <li class="menu-item-has-children"><a href="#">Media</a>
+                                     <li class="menu-item-has-children"><a href="#">Resources</a>
                                          <ul class="sub-menu mega-menu">
                                              <li>
                                                  <ul class="mega-sub-menu">
@@ -221,12 +239,12 @@
                                                      <li><a href="{{ url('events') }}">Events</a></li>
                                                  </ul>
                                              </li>
-                                             <li>
+                                             {{-- <li>
                                                  <ul class="mega-sub-menu">
-                                                     <h3>Our Company Media</h3>
+                                                     <h3>Resources</h3>
                                                      <li>
                                                  </ul>
-                                             </li>
+                                             </li> --}}
                                          </ul>
                                      </li>
                                      <li class="menu-item-has-children"><a href="#">Career</a>

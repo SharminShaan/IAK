@@ -91,7 +91,7 @@
                         </div>
                     </div> --}}
                 </div>
-                <div class="col-xl-6 col-lg-6">
+                {{-- <div class="col-xl-6 col-lg-6">
                     <div class="about-content-two">
                         <div class="section-title mb-30 tg-heading-subheading animation-style2">
                             <span class="sub-title tg-element-title">Career Articleship</span>
@@ -111,6 +111,40 @@
                             </table>
                         </div>
                     </div>
+                </div> --}}
+
+                <div class="row">
+                    @foreach ($articles as $article)
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
+                            <div class="services-item-three">
+                                <div class="">
+                                    <ul>
+                                        <li class="title">Job Title : {{ $article->job_title }} </li>
+                                        <li><i class="far fa-calendar"></i> Application Deadline: {{ $article->date }} </li>
+                                        <li> Vacancy : {{ $article->vacancy }} </li>
+                                        <li> Job Type : {{ $article->employment_status }} </li>
+                                        <li> Job Location : {{ $article->location }} </li>
+                                        <li> Age : {{ $article->age }} </li>
+                                        <li> Education : {{ $article->education }} </li>
+                                        <li> Experience : {{ $article->experience }} </li>
+                                        <li> Compensation : {{ $article->compensation }} </li>
+                                        <li> Job Responsibilities : {{ $article->responsibilities }} </li>
+                                    </ul>
+
+
+
+                                    {{-- Registration --}}
+                                    <a href="{{ route('event.reg.create', 1) }}"
+                                            class="btn btn-info btn-sm edit">Apply</a>
+
+                                    <div class="overlay-icon">
+                                        <i class="flaticon-healthcare"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>

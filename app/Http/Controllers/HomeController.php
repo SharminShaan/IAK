@@ -34,7 +34,7 @@ class HomeController extends Controller
         $slider = Slider::all();
         $Whoweare = Whoweare::findOrFail(1);
         $serviceCat = Sub_categories::where('cat_id', 2)->paginate(4);
-        $clients = Contents::where('category_id', '=', 3)->get();
+        $clients = Contents::where('category_id', '=', 3)->whereIn('subcats_id', [15, 16])->get();
         $teams = Contents::where('subcats_id', '=', 2)->get();
         $enlists = Contents::where('subcats_id', '=', 4)->get();
         $regulates = Contents::where('category_id', '=', 7)->get();

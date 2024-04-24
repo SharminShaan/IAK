@@ -87,16 +87,19 @@
                 <div class="col-lg-6">
                     <div class="inner-contact-info">
                         <h2 class="title">Our Office Address</h2>
+                        @foreach ($contacts as $contact)
+
                         <div class="contact-info-item">
-                            <h5 class="title-two">Head Office</h5>
+                            <h5 class="title-two"> {{ $contact->title }} </h5>
                             <ul class="list-wrap">
-                                <li>Z-Tower” (5th Floor), Plot # 4, Road # 132, 54, Gulshan Avenue, <br> Gulshan- 1, Dhaka-
-                                    1212, Bangladesh</li>
-                                <li>+88 02 9027738</li>
-                                <li>info@audit.com.bd</li>
+                                <li> {{ $contact->location }} </li>
+                                <li> {{ $contact->email }} </li>
+                                <li> {{ $contact->phone }} </li>
+                                <li> {{ $contact->link }} </li>
                             </ul>
                         </div>
-                        <div class="contact-info-item">
+                        @endforeach
+                        {{-- <div class="contact-info-item">
                             <h5 class="title-two">Branch Office </h5>
                             <ul class="list-wrap">
                                 <li>BSCIC Electronics Complex
@@ -106,7 +109,7 @@
                                 <li>Phone : +88 02-9027738</li>
                                 <li>+88 01790-700404</li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

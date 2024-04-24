@@ -53,6 +53,7 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Logo</label>
                                 <input type="file" class="form-control" name="logo">
+                                <small>Image size: 550 x 550 px</small>
                             </div>
 
                             <div class="mb-3">

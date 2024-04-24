@@ -596,3 +596,17 @@
 .hidden.sm\:flex-1.sm\:flex.sm\:items-center.sm\:justify-between {
     display: none;
 }
+
+/* service section home */
+
+
+.services-bg-two {
+    padding: 60px 0 10px;
+}
+
+/* finacial institution*/
+@media (max-width: 1500px) {
+    .breadcrumb-bg {
+        padding: 30px 0 30px;
+    }
+}

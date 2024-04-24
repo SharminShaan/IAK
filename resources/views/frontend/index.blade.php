@@ -80,10 +80,9 @@
         </div>
         <ul>
             @foreach ($buletin as $bulet)
-
             @endforeach
             <li>
-                <a href="{{ route('newsletter.details', $bulet->id) }}">{{$bulet->title}}</a>
+                <a href="{{ route('newsletter.details', $bulet->id) }}">{{ $bulet->title }}</a>
             </li>
 
 
@@ -238,8 +237,11 @@
                                                     @foreach ($clients as $client)
                                                         <div class="col-lg-12">
                                                             <div class="brand-item">
-                                                                <img src="{{ asset('/backendsite/clientimg/' . $client->logo) }}"
-                                                                    class="rounded" alt="Banks, Financial Institutions">
+                                                                @isset($client->logo)
+                                                                    <img src="{{ asset('/backendsite/clientimg/' . $client->logo) }}"
+                                                                        class="rounded" alt="Client logo">
+                                                                @endisset
+
                                                             </div>
                                                         </div>
                                                     @endforeach
@@ -582,4 +584,3 @@
 
     <!-- blog-area-end -->
 @endsection
-
