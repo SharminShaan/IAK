@@ -128,6 +128,19 @@
                                 <p>Membership</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('standard.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Standards</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('faq.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>FAQs</p>
+                            </a>
+                        </li>
 
                     </ul>
                 </li>

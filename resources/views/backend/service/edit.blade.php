@@ -42,7 +42,7 @@
 
                             <div class="form-group">
                                 <label for="name">Service Name</label>
-                                <input type="text" class="form-control" name="name" 
+                                <input type="text" class="form-control" name="name"
                                     value="{{ $data->name }}">
                             </div>
 
@@ -77,13 +77,13 @@
 
                             <div class="form-group">
                                 <label for="name">Service Name</label>
-                                <input type="text" class="form-control" name="name" 
+                                <input type="text" class="form-control" name="name"
                                     value="{{ $data->name }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="link">Link</label>
-                                <input type="text" class="form-control" name="link" 
+                                <input type="text" class="form-control" name="link"
                                     value="{{ $data->link }}">
                             </div>
 
@@ -92,6 +92,11 @@
                                 <input type="file" class="form-control" name="logo"> <br>
                                 <img src="{{ asset('backendsite/servicelogo/' . $data->logo) }}" alt="service-logo"
                                     width="100">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="long_description">Description <small>(Only for Actuarial & IPR Services)</small></label>
+                                <textarea class="form-control" cols="20" rows="10" id="long_description" name="long_description">{{ $data->long_description }}</textarea>
                             </div>
 
                             <br>

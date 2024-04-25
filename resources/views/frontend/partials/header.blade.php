@@ -53,8 +53,7 @@
          </li>
 
          <li class="instagram">
-             <a href="{{ url('faqs') }}"><b>FAQs</b> <i class="fa fa-calculator"
-                     aria-hidden="true"></i></a>
+             <a href="{{ url('faqs') }}"><b>FAQs</b> <i class="fa fa-question" aria-hidden="true"></i></a>
              &nbsp; &nbsp;
          </li>
 

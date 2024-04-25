@@ -46,16 +46,16 @@ class FrontendController extends Controller
     public function standards()
     {
         $setting = ThemeOptions::findOrFail(1);
-        $members = Contents::where('subcats_id', '=', 6)->get();
-        return view('frontend.pages.aboutus.standards', compact('setting', 'members'));
+        $standards = Contents::where('subcats_id', '=', 25)->get();
+        return view('frontend.pages.aboutus.standards', compact('setting', 'standards'));
     }
 
 
     public function faqs()
     {
         $setting = ThemeOptions::findOrFail(1);
-        $members = Contents::where('subcats_id', '=', 6)->get();
-        return view('frontend.pages.aboutus.faqs', compact('setting', 'members'));
+        $faqs = Contents::where('subcats_id', '=', 29)->get();
+        return view('frontend.pages.aboutus.faqs', compact('setting', 'faqs'));
     }
 
 
@@ -106,13 +106,15 @@ class FrontendController extends Controller
     public function actuarial()
     {
         $setting = ThemeOptions::findOrFail(1);
-        return view('frontend.pages.services.actuarial', compact('setting'));
+        $actuarials = Contents::where('subcats_id', '=', 26)->get();
+        return view('frontend.pages.services.actuarial', compact('setting','actuarials'));
     }
 
     public function ipr()
     {
         $setting = ThemeOptions::findOrFail(1);
-        return view('frontend.pages.services.ipr', compact('setting'));
+        $iprs = Contents::where('subcats_id', '=', 27)->get();
+        return view('frontend.pages.services.ipr', compact('setting','iprs'));
     }
 
 
@@ -140,8 +142,8 @@ class FrontendController extends Controller
     public function alllisted()
     {
         $setting = ThemeOptions::findOrFail(1);
-        $foreigns = Contents::where('subcats_id', '=', 17)->orderBy('name', 'asc')->get();
-        return view('frontend.pages.client.alllisted', compact('setting', 'foreigns'));
+        $alllisted = Contents::where('subcats_id', '=', 28)->orderBy('name', 'asc')->get();
+        return view('frontend.pages.client.alllisted', compact('setting', 'alllisted'));
     }
 
 

@@ -1,78 +1,67 @@
 @extends('frontend.layouts.master')
 @section('title', 'Actuarial Service')
 @section('content')
-   <!-- breadcrumb-area -->
-   <section class="breadcrumb-area breadcrumb-bg" >
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb-content">
-                    <h2 class="title" data-aos="fade-down" data-aos-delay="0">IAK Actuarial Service </h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb"  data-aos="fade-up" data-aos-delay="0">
-                            <li class="breadcrumb-item"><a href="index.html" >Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">IAK Actuarial Service </li>
-                        </ol>
-                    </nav>
+    <!-- breadcrumb-area -->
+    <section class="breadcrumb-area breadcrumb-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="title" data-aos="fade-down" data-aos-delay="0">IAK Actuarial Service </h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">IAK Actuarial Service </li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="breadcrumb-shape-wrap">
-        <img src="{{ asset('frontend/assets/img/images/breadcrumb_shape01.png')}}" alt="IAK IAK Actuarial Service ">
-        <img src="{{ asset('frontend/assets/img/images/breadcrumb_shape02.png')}}" alt="IAK IAK Actuarial Service ">
-    </div>
-</section>
-<!-- breadcrumb-area-end -->
-<!-- IAK Actuarial Service -area -->
-<section class="about-area-eleven">
-<div class="container">
-<div class="row align-items-center justify-content-center">
-    <div class="col-lg-6 col-md-9 order-0 order-lg-2">
-        <div class="about-img-wrap-eleven">
-            <img src="{{ asset('frontend/assets/images/services/tax-IAK Actuarial Service -services.jpg')}}" alt="IAK Actuarial Service ">
-            <img src="{{ asset('frontend/assets/img/images/inner_about_shape01.png')}}" alt="IAK IAK Actuarial Service " class="shape-one">
-            <img src="{{ asset('frontend/assets/img/images/inner_about_shape02.png')}}" alt="IAK IAK Actuarial Service " class="shape-two">
+        <div class="breadcrumb-shape-wrap">
+            <img src="{{ asset('frontend/assets/img/images/breadcrumb_shape01.png') }}" alt="IAK IAK Actuarial Service ">
+            <img src="{{ asset('frontend/assets/img/images/breadcrumb_shape02.png') }}" alt="IAK IAK Actuarial Service ">
         </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="about-content-eleven">
-            <div class="section-title mb-30">
-                <span class="sub-title">Tax IAK Actuarial Service </span>
+    </section>
+    <!-- breadcrumb-area-end -->
+    <!-- IAK Actuarial Service -area -->
+    <section class="text-justify">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-content-eleven">
+                        <div class="section-title mb-30">
+                            <h3 class="text-center">IAK Actuarial Service </h3>
+                        </div>
+                        <p>Our local Actuarial Services practice, integrated with our global expertise, has the breadth of
+                            expertise and experience to advise you on actuarial best practice, identifying risks and
+                            addressing complex actuarial related matters. We provide insights and solutions for all
+                            businesses that face significant and complex risks. Our advice and support can help you manage
+                            risk and capital more effectively and provide a more informed, efficient and sustainable basis
+                            for value creation. </p>
+                    </div>
+                </div>
             </div>
-            <p>Tax IAK Actuarial Service  services encompass a range of offerings aimed at assisting individuals and businesses in navigating complex tax regulations and optimizing their tax strategies.  </p>
-            <div class="about-list-two">
-                <ul class="list-wrap">
+            <hr>
 
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 2nd row -->
-<div class="row align-items-center justify-content-center">
-    <div class=" col-xl-10 col-lg-10 mt-5 ">
-        <div class="about-content-eleven mt-5">
-            <div class="section-title mb-30 text-center">
-                <span class="sub-title">Types of tax IAK Actuarial Service  services include:</span>
-            </div>
-            <div class="about-list-two">
-                <ul class="list-wrap">
-                    <li><i class="fas fa-arrow-right"></i>Guidance on federal, state, and individual income tax returns . </li>
-                    <li><i class="fas fa-arrow-right"></i>Advice on federal and state corporate tax returns. </li>
-                    <li><i class="fas fa-arrow-right"></i>
-                        Understanding the tax consequences of acquiring or divesting business assets . </li>
-                    <li><i class="fas fa-arrow-right"></i>
-                        Restructuring or reorganizing corporations and partnerships.</li>
-                    <li><i class="fas fa-arrow-right"></i>Estate planning, including preparation of wills and trusts </li>
-                    <li><i class="fas fa-arrow-right"></i>Estate planning, including preparation of wills and trusts .</li>
 
-                </ul>
+            <div class="row justify-content-center">
+                @foreach ($actuarials as $actuarial)
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
+                        <div class="">
+                            <div class="border p-5">
+                                <h4 class="title"> {{ $actuarial->name }} </h4> <br>
+                                <p> {{ $actuarial->long_description }} </p>
+                                <div class="overlay-icon">
+                                    <i class="flaticon-healthcare"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
+
         </div>
-    </div>
-</div>
-</div>
-</section>
-<!-- IAK Actuarial Service area-end -->
+    </section>
+    <!-- IAK Actuarial Service area-end -->
 @endsection

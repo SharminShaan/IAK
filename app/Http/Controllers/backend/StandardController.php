@@ -3,26 +3,28 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Contents;
 use App\Models\Category;
 use App\Models\Sub_categories;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ServiceController extends Controller
+class StandardController extends Controller
 {
     public function index()
     {
-        // $data = Contents::get();
-        $data = Contents::where('category_id', '=', 2)->get();
-        return view('backend.service.index', compact('data'));
+        $data = Contents::where('subcats_id', '=', 25)->get();
+        return view('backend.standard.index', compact('data'));
     }
 
     public function create()
     {
-        $category = Category::where('id', '=', 2)->get();
-        $datas = Sub_categories::where('cat_id', '=', 2)->get();
-        return view('backend.service.create', compact('datas', 'category'));
+
+        // $category = Category::where('id', '=', 1)->get();
+        // $datas = Sub_categories::where('id', '=', 2)->get();
+        $category = Category::findorfail(1);
+        $datas = Sub_categories::findorfail(25);
+        return view('backend.standard.create', compact('datas', 'category'));
     }
 
     public function store(Request $request)
@@ -30,14 +32,15 @@ class ServiceController extends Controller
         $data = [];
         $data['category_id'] = $request->category_id;
         $data['subcats_id'] = $request->subcats_id;
-        $data['name'] = $request->name;
+        $data['title'] = $request->title;
         $data['long_description'] = $request->long_description;
         $data['link'] = $request->link;
+
         //logo
         if ($request->file('logo')) {
             $rand = rand(10, 100);
             $imageName = time() . $rand . '.' . $request->logo->extension();
-            $request->logo->move(public_path('/backendsite/servicelogo/'), $imageName);
+            $request->logo->move(public_path('/backendsite/standardimg/'), $imageName);
             $data['logo'] = $imageName;
         } else {
             unset($data['logo']);
@@ -45,15 +48,15 @@ class ServiceController extends Controller
 
 
         Contents::create($data);
-        return redirect()->route('servicecon.index')->with('message', 'Insert Successfully!');
+        return redirect()->route('standard.index')->with('message', 'Insert Successfully!');
     }
 
     public function edit($id)
     {
         $data = Contents::findorfail($id);
-        $category = Category::where('id', '=', 2)->get();
-        $sub_cat = Sub_categories::where('cat_id', '=', 2)->get();
-        return view('backend.service.edit', compact('data', 'category', 'sub_cat'));
+        $category = Category::findorfail(1);
+        $datas = Sub_categories::findorfail(25);
+        return view('backend.standard.edit', compact('data', 'category', 'datas'));
     }
 
     public function update(Request $request, $id)
@@ -61,25 +64,23 @@ class ServiceController extends Controller
 
         $data['category_id'] = $request->category_id;
         $data['subcats_id'] = $request->subcats_id;
-        $data['name'] = $request->name;
+        $data['title'] = $request->title;
         $data['long_description'] = $request->long_description;
         $data['link'] = $request->link;
+
         //logo
         if ($request->file('logo')) {
             $rand = rand(10, 100);
             $imageName = time() . $rand . '.' . $request->logo->extension();
-            $request->logo->move(public_path('/backendsite/servicelogo/'), $imageName);
+            $request->logo->move(public_path('/backendsite/standardimg/'), $imageName);
             $data['logo'] = $imageName;
         } else {
             unset($data['logo']);
         }
-        unset($data['category_id']);
-
-
 
         DB::table('contents')->where('id', $request->id)->update($data);
 
-        return redirect()->route('servicecon.index')->with('message', 'Updated successfully');
+        return redirect()->route('standard.index')->with('message', 'Updated successfully');
     }
 
 

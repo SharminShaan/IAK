@@ -39,8 +39,10 @@
                             <th> Email</th>
                             <th> Phone</th>
                             <th> Address</th>
-                            <th> Doc File</th>
                             <th> Service Name</th>
+                            <th> Image</th>
+                            <th> Doc File</th>
+
                         </tr>
                     </thead>
                     <tbody>

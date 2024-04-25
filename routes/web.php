@@ -11,6 +11,7 @@ use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\ContactController;
 use App\Http\Controllers\backend\EnlistmentController;
 use App\Http\Controllers\backend\EventController;
+use App\Http\Controllers\backend\FaqController;
 use App\Http\Controllers\backend\GalleryController;
 use App\Http\Controllers\backend\ProfileController;
 use App\Http\Controllers\backend\TeamController;
@@ -22,6 +23,7 @@ use App\Http\Controllers\backend\PublicationController;
 use App\Http\Controllers\backend\RegistrationsController;
 use App\Http\Controllers\backend\RegulatorController;
 use App\Http\Controllers\backend\SliderController;
+use App\Http\Controllers\backend\StandardController;
 use App\Http\Controllers\backend\ThemeOptionsController;
 use App\Http\Controllers\FrontendController;
 
@@ -235,7 +237,23 @@ Route::get('/membership/edit/{id}', [MembershipController::class, 'edit'])->name
 Route::put('/membership/update/{id}', [MembershipController::class, 'update'])->name('membership.update');
 Route::delete('/membership/delete/{id}', [MembershipController::class, 'destroy'])->name('membership.destroy');
 
-//membership routes
+//standard routes
+Route::get('/standard/index', [StandardController::class, 'index'])->name('standard.index');
+Route::get('/standard/create', [StandardController::class, 'create'])->name('standard.create');
+Route::post('/standard/store', [StandardController::class, 'store'])->name('standard.store');
+Route::get('/standard/edit/{id}', [StandardController::class, 'edit'])->name('standard.edit');
+Route::put('/standard/update/{id}', [StandardController::class, 'update'])->name('standard.update');
+Route::delete('/standard/delete/{id}', [StandardController::class, 'destroy'])->name('standard.destroy');
+
+//faq routes
+Route::get('/faq/index', [FaqController::class, 'index'])->name('faq.index');
+Route::get('/faq/create', [FaqController::class, 'create'])->name('faq.create');
+Route::post('/faq/store', [FaqController::class, 'store'])->name('faq.store');
+Route::get('/faq/edit/{id}', [FaqController::class, 'edit'])->name('faq.edit');
+Route::put('/faq/update/{id}', [FaqController::class, 'update'])->name('faq.update');
+Route::delete('/faq/delete/{id}', [FaqController::class, 'destroy'])->name('faq.destroy');
+
+//newsletter routes
 Route::get('/newsletter/index', [NewsletterController::class, 'index'])->name('newsletter.index');
 Route::get('/newsletter/create', [NewsletterController::class, 'create'])->name('newsletter.create');
 Route::post('/newsletter/store', [NewsletterController::class, 'store'])->name('newsletter.store');
