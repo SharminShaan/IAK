@@ -43,12 +43,12 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('pagesetup.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Page Setup </p>
                             </a>
-                        </li>
+                        </li> --}}
 
                     </ul>
                 </li>
@@ -66,7 +66,7 @@
                             <a href="{{ route('themeoptions.index') }}" class="nav-link">
                                 <i class="nav-icon far fa-plus-square"></i>
                                 <p>
-                                    ThemeOptions
+                                    Theme Options
 
                                 </p>
                             </a>

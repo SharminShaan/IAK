@@ -53,6 +53,7 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Logo</label>
                                 <input type="file" class="form-control" name="logo"> <br>
+                                <span>Size: 40 x 40 px</span>
                                 <img src="{{ asset('backendsite/memimg/' . $data->logo) }}" alt="membership-logo"
                                     width="100">
                             </div>
@@ -60,6 +61,7 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Image</label>
                                 <input type="file" class="form-control" name="image"> <br>
+                                <span>Size: 300 x 300 px</span>
                                 <img src="{{ asset('backendsite/memimg/' . $data->image) }}" alt="membership-logo"
                                     width="100">
                             </div>

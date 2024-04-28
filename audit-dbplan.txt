@@ -1,6 +1,3 @@
-
-
-
 1. contents table:
 
 id, cat_id, sub_cat_id, child_cat_id, type,
@@ -22,9 +19,6 @@ employment_status, location
 event:
 date,time,venue
 
-
-//
-
 2. blog table
 // title,date,uploaded_by,blog_category,comment,long_description,short_description,blockquote,image,tags
 
@@ -35,34 +29,6 @@ blog_cat_name
 4. registers_table
 type(1=event,2=professtional,3=articleship,4=contact,5=pdf_download),
 type_id,type_name,name,email,phone,address,others,doc_file,service_type,long_description
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -116,6 +82,7 @@ cat_id, sub_cat_id,title, short_description, image,image2,image3,image4, image5,
 cat_id, sub_cat_id, title, long_description, image, doc_upload,date,time,venue (done)
 
 ========= career =========
+
 13. Professional & articleship:
 cat_id, sub_cat_id, job_title,vacancy,age,education, experience, responsibilities,compensation,
 employment_status, location,date(deadline), (done)
@@ -127,16 +94,13 @@ cat_id, title,long_description,image,logo, link ,(done)
 cat_id, title,location,phone,email, link(map) (done)
 
 
-
 ### Registration form:
 
 16. event: name,email,phone,address, hidden(type_id,type_name,type=1)
-
 //professional: name,email,phone,doc_file, hidden(type_id,type_name,type=2)
 //articleship: name,email,phone,doc_file, hidden(type_id,type_name,type=3)
 //contact:name,email,phone,service_type,long_description,hidden(type=4)
 /publicationp-Download: name,email,phone, hidden(type_id,type_name,type=5)
-
 
 
 17. blog:
@@ -144,7 +108,6 @@ blog_cat_name, title,date,uploaded_by,comment,long_description,short_description
 
 18. blog_category
 blog_cat_name // (Done)
-
 
 19. categories table // (Done)
 category_name
@@ -154,3 +117,34 @@ cat_id, sub_cat_name,
 
 
 
+// Gmail:
+
+email: aftabkamrulislam@gmail.com
+pass:111222@IAK
+
+//chatbot
+https://app.crisp.chat/initiate/login/
+aftabkamrulislam@gmail.com
+aftabkamrulislam@gmail.com
+
+
+============ Work List ========
+
+1.	 Memebership ==
+2.	 Standards ==
+3.	 Training & Development ==
+4.	 IAK Actuarial Service ==
+5.	 IPR (Intellectual Property Rights) Service, ==
+6.	 Listed Companies ==
+7.	 Publication (Download form)
+8.	 Events, (Reg Form)
+9.	 Profesional (Reg Form)
+10.	 articleship (Reg Form)
+11.	 Contact
+12.  Right Sidebar =
+13.  Tax Soft integrate
+14.  Responsive Check
+15.  Go Live
+16.  Page crud data show in fed and backend theme modify (X)
+17. alogia id null issue in Store
+18. regulators data show remain ==

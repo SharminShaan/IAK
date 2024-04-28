@@ -68,6 +68,7 @@
             <img src="{{ asset('frontend/assets/img/services/h4_services_shape.png') }}" alt="" data-aos="fade-left"
                 data-aos-delay="200">
         </div>
+
     </section>
     <!-- standards-area-end -->
 @endsection

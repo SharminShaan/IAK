@@ -47,14 +47,13 @@
                                         <div class="services-content-three">
                                             <h4 class="title"> {{ $newsletter->subtitle }} </h4>
                                             <p> {{ $newsletter->short_description }} </p>
-                                            <hr>
                                             <p> {{ $newsletter->long_description }} </p>
                                             <div class="overlay-icon">
                                                 <i class="flaticon-protection"></i>
                                             </div>
 
                                             <img src="{{ asset('/backendsite/newimg/' . $newsletter->image) }}"
-                                                class="img-fluid text-center" alt="ICAB"></a>
+                                                class="img-fluid rounded" alt="ICAB"></a>
                                             <hr>
                                             @isset($newsletter->file_upload)
                                                 <p class="text-center"> <a target="__blank" href="{{ asset('/backendsite/newimg/pdf/'.$newsletter->file_upload) }}"> <b> PDF Download: </b>  {{$newsletter->file_upload}}</a> </p>

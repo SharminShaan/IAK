@@ -64,11 +64,13 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Logo</label>
                                 <input type="file" class="form-control" name="logo">
+                                <span>Size: 40 x 40 px</span>
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Image</label>
                                 <input type="file" class="form-control" name="image">
+                                <span>Size: 300 x 300 px</span>
                             </div>
 
                             <button type="Submit" class="btn btn-primary">Submit</button>

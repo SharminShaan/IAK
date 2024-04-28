@@ -47,31 +47,13 @@
                     <div class="services-content-six">
                         <div class="services-content-six-top">
                             <img class="circle" src="{{ asset('/backendsite/regulateimg/' . $regulator->logo) }}"  width="80"  alt="finance_logo">
-                            <h2 class="title"><a target="_blank" href=" {{ $regulator->link }} "> {{ $regulator->title }} </a></h2>
+                            <h2 class="title" style="text-align: left !important;" ><a target="_blank" href=" {{ $regulator->link }} "> {{ $regulator->title }} </a></h2>
                         </div>
                         <p> {{ $regulator->long_description }} </p>
                     </div>
                 </div> <hr>
                 @endforeach
-                {{-- <div class="services-item-six" data-aos="fade-up" data-aos-delay="400">
-                    <div class="services-thumb-six">
-                        <a href="https://roc.gov.bd/"><img src="{{ asset('frontend/assets/images/regulators/rjsc.jpg')}}" alt="IAK RJSC"></a>
-                    </div>
-                    <div class="services-content-six">
-                        <div class="services-content-six-top">
-                            <h2 class="title"><a href="https://roc.gov.bd/">Registrar of Joint Stock Companies And Firms
-                                    (RJSC)</a></h2>
-                        </div>
-                        <p>The Registrar of Joint Stock Companies and Firms (RJSC) is an authority responsible for the
-                            registration and regulation of companies and firms in various countries. It typically operates
-                            under the jurisdiction of the respective country's laws and regulations governing business
-                            entities.</p>
-                        <p>The RJSC in Bangladesh maintains a registry of all registered companies and firms, including
-                            their details such as incorporation documents, financial statements, and ownership information.
-                            It plays a crucial role in ensuring transparency, accountability, and legal compliance within
-                            the corporate sector.</p>
-                    </div>
-                </div> --}}
+
 
             </div>
         </div>

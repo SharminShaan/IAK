@@ -31,11 +31,11 @@
                 <div class="col-xl-10 col-lg-10 col-md-10  mt-5">
                     <div class="section-title section-title-three text-center mb-60 tg-heading-subheading animation-style1">
                         <span class="sub-title tg-element-title">Listed Companies</span>
-                        <h2 class="title tg-element-title">Government/ Semi-Government/Autonomous Bodies and Listed
+                        <h2 class="title tg-element-title">Government/Semi-Government/Autonomous Bodies and Listed
                             Companies
                         </h2>
-                        <p>This is a list of notable government-owned companies of Bangladesh. This is a dynamic list and
-                            may never be able to satisfy particular standards for completeness.</p>
+                        {{-- <p>This is a list of notable government-owned companies of Bangladesh. This is a dynamic list and
+                            may never be able to satisfy particular standards for completeness.</p> --}}
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-10 mb-5">

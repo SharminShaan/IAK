@@ -50,15 +50,12 @@ class FrontendController extends Controller
         return view('frontend.pages.aboutus.standards', compact('setting', 'standards'));
     }
 
-
     public function faqs()
     {
         $setting = ThemeOptions::findOrFail(1);
         $faqs = Contents::where('subcats_id', '=', 29)->get();
         return view('frontend.pages.aboutus.faqs', compact('setting', 'faqs'));
     }
-
-
 
     public function auditassurance()
     {
@@ -100,21 +97,22 @@ class FrontendController extends Controller
     public function trainingdevelopment()
     {
         $setting = ThemeOptions::findOrFail(1);
-        return view('frontend.pages.services.trainingdevelopment', compact('setting'));
+        $training = Contents::where('subcats_id', '=', 14)->get();
+        return view('frontend.pages.services.trainingdevelopment', compact('setting','training'));
     }
 
     public function actuarial()
     {
         $setting = ThemeOptions::findOrFail(1);
         $actuarials = Contents::where('subcats_id', '=', 26)->get();
-        return view('frontend.pages.services.actuarial', compact('setting','actuarials'));
+        return view('frontend.pages.services.actuarial', compact('setting', 'actuarials'));
     }
 
     public function ipr()
     {
         $setting = ThemeOptions::findOrFail(1);
         $iprs = Contents::where('subcats_id', '=', 27)->get();
-        return view('frontend.pages.services.ipr', compact('setting','iprs'));
+        return view('frontend.pages.services.ipr', compact('setting', 'iprs'));
     }
 
 

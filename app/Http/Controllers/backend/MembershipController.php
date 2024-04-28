@@ -19,7 +19,6 @@ class MembershipController extends Controller
 
     public function create()
     {
-
         // $category = Category::where('id', '=', 1)->get();
         // $datas = Sub_categories::where('id', '=', 2)->get();
         $category = Category::findorfail(1);

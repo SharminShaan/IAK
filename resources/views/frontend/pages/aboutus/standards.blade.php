@@ -31,7 +31,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="section-title-two mb-20 tg-heading-subheading animation-style2">
                         <span class="sub-title tg-element-title">Gain a Success With Us!</span>
-                        <h2 class="title tg-element-title">Standards are principle-focused and provide a framework for performing and promoting internal auditing. </h2>
+                        <h2 class="">Standards are principle-focused and provide a framework for performing and promoting internal auditing. </h2>
                     </div>
                 </div>
             </div>

@@ -81,11 +81,11 @@
                                     value="{{ $data->name }}">
                             </div>
 
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="link">Link</label>
                                 <input type="text" class="form-control" name="link"
                                     value="{{ $data->link }}">
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Logo</label>
@@ -95,7 +95,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="long_description">Description <small>(Only for Actuarial & IPR Services)</small></label>
+                                <label for="long_description">Description <small>(Only for Training & Dev, Actuarial & IPR Services)</small></label>
                                 <textarea class="form-control" cols="20" rows="10" id="long_description" name="long_description">{{ $data->long_description }}</textarea>
                             </div>
 

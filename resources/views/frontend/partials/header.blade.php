@@ -34,7 +34,7 @@
                  &nbsp; </a>
          </li>
          <li class="facebook">
-             <a target="_blank" href="tel:+8801790700404"><b>+88 01790 700 404</b> <i class="fa fa-phone"></i></a>
+             <a target="_blank" href="tel:+8801790700404"><b>+88 01790700404</b> <i class="fa fa-phone"></i></a>
              &nbsp; &nbsp;
          </li>
          <li class="google-plus">
@@ -43,7 +43,7 @@
              &nbsp; &nbsp;
          </li>
          <li class="instagram">
-             <a target="_blank" href="ref"><b> Apply Now</b> <i class="fa fa-users" aria-hidden="true"></i></a>
+             <a target="_blank" href="{{ url('/professional') }}"><b> Apply Now</b> <i class="fa fa-users" aria-hidden="true"></i></a>
              &nbsp; &nbsp;
          </li>
          <li class="instagram">

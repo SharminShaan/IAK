@@ -36,7 +36,7 @@
                             <div class="row">
 
                                 @foreach ($blogs as $blog)
-                                    <div class="col-xl-4 col-lg-4 col-md-4 ">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 ">
                                         <div class="blog-post-item-four">
                                             <div class="blog-post-thumb-four">
                                                 <!-- image must be 392/260  -->
