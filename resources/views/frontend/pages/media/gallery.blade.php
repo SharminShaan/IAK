@@ -34,7 +34,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="section-title-two mb-50 tg-heading-subheading animation-style2">
                         <span class="sub-title tg-element-title">Our Gallery</span>
-                        <h2 class="title tg-element-title">Islam Aftab Kamrul & Co., Chartered Accountants Gallery</h2>
+                        <h2 class="title tg-element-title">Islam Aftab Kamrul & Co. Gallery</h2>
                     </div>
                 </div>
             </div>

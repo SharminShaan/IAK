@@ -34,8 +34,8 @@
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="section-title-two mb-50 tg-heading-subheading animation-style2">
                         <span class="sub-title tg-element-title">Gain a Success With Us!</span>
-                        <h2 class="title tg-element-title">We have already served a good number of members from a wide range
-                            of sectors. Some of sectors are listed below</h2>
+                        {{-- <h2 class="title tg-element-title">We have already served a good number of members from a wide range
+                            of sectors. Some of sectors are listed below</h2> --}}
                     </div>
                 </div>
             </div>
@@ -44,7 +44,8 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
                         <div class="services-item-three">
                             <div class="services-thumb-three membership">
-                                <img src="{{ asset('/backendsite/eventimg/' . $event->image) }}" alt="events"> <br>
+                                <img width="400" src="{{ asset('/backendsite/eventimg/' . $event->image) }}"
+                                    alt="events"> <br>
                             </div>
                             <div class="">
                                 <br>
@@ -57,10 +58,11 @@
                                 <p>{{ $event->long_description }}</p> <br>
 
                                 {{-- Registration --}}
-                                <a href="{{ route('frontend.index') }}">
-                                    <button class="text-center"> Register Now</button>
-                                </a>
-
+                                <div class="text-center">
+                                    <a href="{{ route('event.reg.create',  $event->id ) }}" >
+                                        <button class="text-center"> Register Now</button>
+                                    </a>
+                                </div>
                                 <div class="overlay-icon">
                                     <i class="flaticon-healthcare"></i>
                                 </div>

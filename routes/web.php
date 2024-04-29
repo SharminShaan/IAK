@@ -53,7 +53,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 
-/*********************** Frontend  *************************************/
+/*********************** Frontend  ************************/
 
 Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
 
@@ -110,6 +110,31 @@ Route::post('/admin/subscriber/send-email-submit', [SubscriberController::class,
 
 //search route
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+//  RegistrationsController routes
+
+
+Route::get('/pro/registration/index', [RegistrationsController::class, 'professionalindex'])->name('pro.reg.index');
+Route::get('/pro/registration/create/{id}', [RegistrationsController::class, 'professionalcreate'])->name('pro.reg.create');
+
+Route::get('/articleship/registration/index', [RegistrationsController::class, 'articleshipindex'])->name('articleship.reg.index');
+Route::get('/articleship/registration/create/{id}', [RegistrationsController::class, 'articleshipcreate'])->name('articleship.reg.create');
+
+Route::get('/event/registration/index', [RegistrationsController::class, 'eventindex'])->name('event.reg.index');
+Route::get('/event/registration/create/{id}', [RegistrationsController::class, 'eventcreate'])->name('event.reg.create');
+
+
+Route::get('/contact/index', [RegistrationsController::class, 'contactindex'])->name('contact.index');
+
+Route::get('/publication/registration/index', [RegistrationsController::class, 'publicationPdfindex'])->name('publication.reg.index');
+Route::get('/publication/registration/create/{id}', [RegistrationsController::class, 'publicationPdfcreate'])->name('publication.download');
+Route::get('/publication/download/{id}', [RegistrationsController::class, 'publicationPdfcreates'])->name('publication.downloadfile');
+
+
+Route::post('/registration/store', [RegistrationsController::class, 'store'])->name('registration.store');
+Route::delete('/registration/delete/{id}', [RegistrationsController::class, 'destroy'])->name('registration.destroy');
+
+
 
 
 /*********************** backend  route *********************************************************/
@@ -303,27 +328,4 @@ Route::put('/gallery/update/{id}', [GalleryController::class, 'update'])->name('
 Route::delete('/gallery/delete/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
 
 
-
-//  RegistrationsController routes
-Route::get('/event/registration/index', [RegistrationsController::class, 'eventindex'])->name('event.reg.index');
-Route::get('/event/registration/create/{id}', [RegistrationsController::class, 'eventcreate'])->name('event.reg.create');
-
-Route::get('/pro/registration/index', [RegistrationsController::class, 'professionalindex'])->name('pro.reg.index');
-Route::get('/pro/registration/create/{id}', [RegistrationsController::class, 'professionalcreate'])->name('pro.reg.create');
-
-Route::get('/articleship/registration/index', [RegistrationsController::class, 'articleshipindex'])->name('articleship.reg.index');
-Route::get('/articleship/registration/create/{id}', [RegistrationsController::class, 'articleshipcreate'])->name('articleship.reg.create');
-
-Route::get('/contact/index', [RegistrationsController::class, 'contactindex'])->name('contact.index');
-
-Route::get('/publication/registration/index', [RegistrationsController::class, 'publicationPdfindex'])->name('publication.reg.index');
-Route::get('/publication/registration/create/{id}', [RegistrationsController::class, 'publicationPdfcreate'])->name('publication.reg.create');
-
-
-Route::post('/registration/store', [RegistrationsController::class, 'store'])->name('registration.store');
-
-// Route::get('/registration/create', [RegistrationsController::class, 'create'])->name('registration.create');
-// Route::get('/registration/edit/{id}', [RegistrationsController::class, 'edit'])->name('registration.edit');
-// Route::put('/registration/update/{id}', [RegistrationsController::class, 'update'])->name('registration.update');
-// Route::delete('/registration/delete/{id}', [RegistrationsController::class, 'destroy'])->name('registration.destroy');
 

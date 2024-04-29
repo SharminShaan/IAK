@@ -45,7 +45,7 @@
                             <tr>
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $row->title }}</td>
-                                <td>{{ $row->file_upload }}</td>
+                                <td> <a target="_blank" href="{{ asset('/backendsite/newimg/pdf/'.$row->file_upload) }}">{{ $row->file_upload }} </a></td>
                                 <td>
                                     <a href="{{ route('publication.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
                                             class="fas fa-edit"></i></a>

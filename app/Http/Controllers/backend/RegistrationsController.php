@@ -4,25 +4,13 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Contents;
 use App\Models\Registrations;
 use App\Models\ThemeOptions;
 use Illuminate\Http\Request;
 
 class RegistrationsController extends Controller
 {
-
-    public function eventindex()
-    {
-        $data = Registrations::where('type', '=', 1)->paginate(20);
-        return view('backend.registration.index', compact('data'));
-    }
-
-    public function eventcreate($id)
-    {
-        $setting = ThemeOptions::findOrFail(1);
-        $data = Category::findorfail($id);
-        return view('frontend.pages.career.apply', compact('data', 'setting'));
-    }
 
 
     // Professional
@@ -35,11 +23,13 @@ class RegistrationsController extends Controller
     public function professionalcreate($id)
     {
         $setting = ThemeOptions::findOrFail(1);
-        $data = Category::findorfail($id);
-        return view('frontend.pages.career.apply', compact('data', 'setting'));
+        $profs = Contents::findOrFail($id);
+        // dd($profs);
+        return view('frontend.pages.career.prof_apply', compact('profs', 'setting'));
     }
 
-    // article ship
+
+    // articleship
     public function articleshipindex()
     {
         $data = Registrations::where('type', '=', 3)->paginate(20);
@@ -49,16 +39,31 @@ class RegistrationsController extends Controller
     public function articleshipcreate($id)
     {
         $setting = ThemeOptions::findOrFail(1);
-        $data = Category::findorfail($id);
-        return view('frontend.pages.career.apply', compact('data', 'setting'));
+        $aship= Contents::findOrFail($id);
+        return view('frontend.pages.career.aship_apply', compact('aship', 'setting'));
     }
+
+    public function eventindex()
+    {
+        $data = Registrations::where('type', '=', 1)->paginate(20);
+        return view('backend.registration.index', compact('data'));
+    }
+
+    public function eventcreate($id)
+    {
+        $setting = ThemeOptions::findOrFail(1);
+        $event= Contents::findOrFail($id);
+        return view('frontend.pages.career.event_apply', compact('event', 'setting'));
+    }
+
+
 
     // contact
 
     public function contactindex()
     {
         $data = Registrations::where('type', '=', 4)->paginate(20);
-        return view('backend.registration.index', compact('data'));
+        return view('backend.registration.contact_index', compact('data'));
     }
 
 
@@ -66,14 +71,14 @@ class RegistrationsController extends Controller
     public function publicationPdfindex()
     {
         $data = Registrations::where('type', '=', 5)->paginate(20);
-        return view('backend.registration.index', compact('data'));
+        return view('backend.registration.download_index', compact('data'));
     }
 
     public function publicationPdfcreate($id)
     {
         $setting = ThemeOptions::findOrFail(1);
-        $data = Category::findorfail($id);
-        return view('frontend.pages.career.apply', compact('data', 'setting'));
+        $download= Contents::findOrFail($id);
+        return view('frontend.pages.career.download_apply', compact('download', 'setting'));
     }
 
     // type, type_id, type_name, name, email, phone, address, image, doc_file, service_type, service_name, message
@@ -88,14 +93,10 @@ class RegistrationsController extends Controller
         $data['email'] = $request->email;
         $data['phone'] = $request->phone;
         $data['address'] = $request->address;
+        $data['service_name'] = $request->service_name ?? '';
 
-        if ($request->file('service_name')) {
-            $data['service_name'] = $request->service_name;
-        } else {
-            unset($data['service_name']);
-        }
 
-        if ($request->file('message')) {
+        if ($request->message) {
             $data['message'] = $request->message;
         } else {
             unset($data['message']);
@@ -123,6 +124,7 @@ class RegistrationsController extends Controller
 
         Registrations::create($data);
         return redirect()->back()->with('message', 'Saved Successfully!');
+        // return redirect()->route('publication.download')->with('message', 'Saved Successfully!');
     }
 
 
@@ -177,10 +179,10 @@ class RegistrationsController extends Controller
     // }
 
 
-    // public function destroy($id)
-    // {
-    //     $data = Registrations::find($id);
-    //     $data->delete();
-    //     return redirect()->back()->with('message', 'Deleted Successfully!');
-    // }
+    public function destroy($id)
+    {
+        $data = Registrations::find($id);
+        $data->delete();
+        return redirect()->back()->with('message', 'Deleted Successfully!');
+    }
 }

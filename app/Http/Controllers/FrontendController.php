@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blogs;
 use App\Models\Category;
 use App\Models\Contents;
+use App\Models\Sub_categories;
 use App\Models\ThemeOptions;
 use Illuminate\Http\Request;
 
@@ -227,7 +228,8 @@ class FrontendController extends Controller
     {
         $setting = ThemeOptions::findOrFail(1);
         $contacts = Contents::where('category_id', '=', 8)->get();
-        return view('frontend.pages.contact', compact('setting', 'contacts'));
+        $subcats = Sub_categories::where('cat_id', 2)->get();
+        return view('frontend.pages.contact', compact('setting', 'contacts', 'subcats'));
     }
 
 

@@ -31,9 +31,7 @@
                         <div class="blog-details-wrap">
                             <div class="row justify-content-center">
                                 <div class="col-71">
-                                    <div class="blog-details-thumb">
-                                        <img src="{{ asset('/backendsite/blogimage/'.$blog->image)}}" alt="">
-                                    </div>
+
                                     <div class="blog-details-content">
                                         <h2 class="title"> {{$blog->title}}</h2>
                                         <div class="blog-meta-three">
@@ -45,6 +43,9 @@
                                             </ul>
                                         </div>
                                         <p> {{$blog->long_description}} </p>
+                                        <div class="blog-details-thumb ">
+                                            <img class="" src="{{ asset('/backendsite/blogimage/'.$blog->image)}}" alt="">
+                                        </div>
 
                                         <blockquote>
                                             <p>“ {{$blog->quotation}} ”</p>

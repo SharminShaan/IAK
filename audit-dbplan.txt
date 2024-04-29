@@ -137,14 +137,16 @@ aftabkamrulislam@gmail.com
 5.	 IPR (Intellectual Property Rights) Service, ==
 6.	 Listed Companies ==
 7.	 Publication (Download form)
-8.	 Events, (Reg Form)
-9.	 Profesional (Reg Form)
-10.	 articleship (Reg Form)
-11.	 Contact
+8.	 Events, (Reg Form) ==
+9.	 Profesional (Reg Form) ==
+10.	 articleship (Reg Form) ==
+11.	 Contact ==
 12.  Right Sidebar =
-13.  Tax Soft integrate
-14.  Responsive Check
-15.  Go Live
-16.  Page crud data show in fed and backend theme modify (X)
-17. alogia id null issue in Store
-18. regulators data show remain ==
+13.  Page crud data show in fed and backend theme modify (X)
+14. regulators data show remain ==
+
+
+15.  Tax Soft integrate
+16.  Responsive Check
+17.  Go Live
+18.  alogia id null issue in Store

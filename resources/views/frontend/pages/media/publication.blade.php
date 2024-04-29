@@ -43,28 +43,29 @@
                     <div class="services-widget">
                         <h4 class="sw-title"> Download Company Documents</h4>
                         <div class="services-brochure-wrap">
+
                             @foreach ($publications as $publication)
 
+                                {{-- <a href="{{ asset('/backendsite/newimg/pdf/'.$publication->file_upload) }}"  target="_blank" download class="download-btn">
+                                    <i class="far fa-file-pdf"></i>{{ $publication->title }}
+                                </a> --}}
 
-                            <a href="{{ $publication->link }}" target="_blank" download
-                                class="download-btn"><i class="far fa-file-pdf"></i>{{$publication->title}}</a>
-                            {{-- <a href="assets/images/New-VAT-SRO-No.-132-Law-2020-127-Mushak.pdf" target="_blank" download
-                                class="download-btn"><i
-                                    class="far fa-file-pdf"></i>New-VAT-SRO-No.-132-Law-2020-127-Mushak</a>
-                            <a href="assets/images/Finance_Act_2020.pdf" target="_blank" download class="download-btn"><i --}}
-                                    {{-- class="far fa-file-alt"></i>Finance_Act_2020</a> --}}
+
+                                <a href="{{ route('publication.download',  $publication->id ) }}"  class="download-btn">
+                                    <i class="far fa-file-pdf"></i> Download: {{ $publication->title }}
+                                </a>
 
 
 
                             @endforeach
 
-                                    <!-- Button trigger modal -->
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary"
+                            {{-- modal --}}
+                            {{-- <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary"
                                 data-mdb-modal-init data-mdb-target="#staticBackdrop2">
                                 <i class="far fa-file-alt"></i> Download PDF: Finance_Act_2020
                             </button>
 
-                            <!-- Modal -->
+
                             <div class="modal fade" id="staticBackdrop2" tabindex="-1" aria-labelledby="exampleModalLabel2"
                                 aria-hidden="true">
                                 <div class="modal-dialog d-flex justify-content-center">
@@ -76,25 +77,25 @@
                                         </div>
                                         <div class="modal-body p-4">
                                             <form>
-                                                <!-- Name input -->
+
                                                 <div data-mdb-input-init class="form-outline mb-4">
                                                     <input type="text" id="name2" class="form-control" />
                                                     <label class="form-label" for="name2">Name</label>
                                                 </div>
 
-                                                <!-- Email input -->
+
                                                 <div data-mdb-input-init class="form-outline mb-4">
                                                     <input type="email" id="email2" class="form-control" />
                                                     <label class="form-label" for="email2">Email address</label>
                                                 </div>
 
-                                                <!-- password input -->
+
                                                 <div data-mdb-input-init class="form-outline mb-4">
                                                     <input type="password" id="password2" class="form-control" />
                                                     <label class="form-label" for="password2">Password</label>
                                                 </div>
 
-                                                <!-- Submit button -->
+
                                                 <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                                     class="btn btn-primary btn-block" data-mdb-dismiss="modal"
                                                     aria-label="Close"> Download
@@ -105,8 +106,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Modal -->
+                            </div> --}}
+
                         </div>
                     </div>
                 </div>

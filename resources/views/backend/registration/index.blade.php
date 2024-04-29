@@ -39,9 +39,10 @@
                             <th> Email</th>
                             <th> Phone</th>
                             <th> Address</th>
-                            <th> Service Name</th>
+                            {{-- <th> Service Name</th> --}}
                             <th> Image</th>
                             <th> Doc File</th>
+                            <th> Action </th>
 
                         </tr>
                     </thead>
@@ -57,10 +58,10 @@
                                 <td>{{ $row->phone }}</td>
                                 <td>{{ $row->address }}</td>
 
-                                <td>
+                                {{-- <td>
                                     @if ($row->service_name)
                                     <{{ $row->address }} @else @endif
-                                </td>
+                                </td> --}}
 
                                 <td>
                                     @if ($row->image)
@@ -73,18 +74,16 @@
 
                                 <td>
                                     @if ($row->doc_file)
-                                        <img src="{{ asset('backendsite/registration/' . $row->doc_file) }}" alt="image"
-                                            width="100">
+                                        <a target="_blank" href="{{ asset('backendsite/registration/' . $row->doc_file) }}">{{$row->doc_file}}</a>
                                     @else
                                         Doc Not Found
                                     @endif
                                 </td>
 
 
-
-                                {{-- <td>
-                                    <a href="{{ route('registration.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
-                                            class="fas fa-edit"></i></a>
+                                <td>
+                                    {{-- <a href="{{ route('registration.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
+                                            class="fas fa-edit"></i></a> --}}
 
                                     <form action="{{ route('registration.destroy', $row->id) }}" method="POST">
                                         @csrf
@@ -95,7 +94,7 @@
                                         </a>
                                     </form>
 
-                                </td> --}}
+                                </td>
 
                             </tr>
                         @endforeach

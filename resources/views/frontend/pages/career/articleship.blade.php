@@ -117,25 +117,28 @@
                     @foreach ($articles as $article)
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
                             <div class="services-item-three">
-                                <div class="">
+                                <div class="regi border p-3">
                                     <ul>
-                                        <li class="title">Job Title : {{ $article->job_title }} </li>
-                                        <li><i class="far fa-calendar"></i> Application Deadline: {{ $article->date }} </li>
-                                        <li> Vacancy : {{ $article->vacancy }} </li>
-                                        <li> Job Type : {{ $article->employment_status }} </li>
-                                        <li> Job Location : {{ $article->location }} </li>
-                                        <li> Age : {{ $article->age }} </li>
-                                        <li> Education : {{ $article->education }} </li>
-                                        <li> Experience : {{ $article->experience }} </li>
-                                        <li> Compensation : {{ $article->compensation }} </li>
-                                        <li> Job Responsibilities : {{ $article->responsibilities }} </li>
+                                        <li class="title"><b>Job Title : </b> {{ $article->job_title }} </li>
+                                        <li> <b>Vacancy: </b> {{ $article->vacancy }} </li>
+                                        <li><b> Job Responsibilities :</b> {{ $article->responsibilities }} </li>
+                                        <li> <b>Education :</b> {{ $article->education }} </li>
+                                        <li> <b>Experience :</b> {{ $article->experience }} </li>
+                                        <li> <b>Job Type :</b> {{ $article->employment_status }} </li>
+                                        <li> <b>Job Location :</b> {{ $article->location }} </li>
+                                        <li> <b>Age :</b> {{ $article->age }} </li>
+                                        <li> <b>Compensation :</b> {{ $article->compensation }} </li>
+                                        <li><i class="far fa-calendar"></i> <b>Application Deadline:</b> {{ $article->date }} </li>
                                     </ul>
 
 
 
                                     {{-- Registration --}}
-                                    <a href="{{ route('event.reg.create', 1) }}"
+                                    <div class="text-center">
+                                        <a href="{{ route('articleship.reg.create', $article->id) }}"
                                             class="btn btn-info btn-sm edit">Apply</a>
+                                    </div>
+
 
                                     <div class="overlay-icon">
                                         <i class="flaticon-healthcare"></i>

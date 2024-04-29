@@ -306,7 +306,7 @@
                     <li class="nav-item">
                         <a href="{{ route('publication.reg.index',) }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Publication Download User </p>
+                            <p> Download UsersList </p>
                         </a>
                     </li>
 

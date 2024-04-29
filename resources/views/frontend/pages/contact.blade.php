@@ -26,9 +26,17 @@
     </section>
     <!-- breadcrumb-area-end -->
 
-    <section class="inner-contact-area pt-60 pb-60">
+    <section class="inner-contact-area ">
         <div class="container">
             <div class="row align-items-center">
+
+                <div class="">
+                    @if ($message = Session::get('message'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
+                </div>
 
                 @foreach ($contacts as $contact)
                     <div class="col-lg-6">
@@ -66,32 +74,44 @@
 
                 <div class="col-xl-6 col-lg-6 col-md-6">
                     <div class="services-widget">
-                        <h4 class="sw-title">Feel Free To Consulting</h4>
-                        <div class="services-widget-form">
-                            <form action="#">
-                                <div class="form-grp">
-                                    <input type="text" placeholder="Your Name" required>
-                                </div>
-                                <div class="form-grp">
-                                    <input type="email" placeholder="E-mail Address" required>
-                                </div>
-                                <div class="form-grp">
-                                    <input type="number" placeholder="Phone">
-                                </div>
-                                <div class="form-grp">
-                                    <p>Service Type</p>
-                                    <select name="choice">
-                                        <option value="second" selected>Audit & Assurance</option>
-                                        <option value="third">Taxation & VAT</option>
-                                        <option value="third">Secretarial, licensing & compliance</option>
-                                        <option value="third">Business Services</option>
-                                        <option value="third">Human Resources & others Services</option>
-                                        <option value="third">Training & Development</option>
-                                    </select>
 
+
+
+                        <h4 class="sw-title text-center">Feel Free To Consulting</h4>
+                        <div class="services-widget-form">
+                            <form action="{{ route('registration.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+
+                                <input type="hidden" class="form-control" name="type" value="4">
+                                <input type="hidden" class="form-control" name="type_id" value="4">
+                                <input type="hidden" class="form-control" name="type_name" value="contact">
+
+                                <div class="form-grp">
+                                    <input type="text" name="name" placeholder="Your Name" required>
                                 </div>
                                 <div class="form-grp">
-                                    <textarea name="message" required placeholder="Type Your Message"></textarea>
+                                    <input type="email" name="email" placeholder="E-mail Address" required>
+                                </div>
+                                <div class="form-grp">
+                                    <input type="text" name="phone" placeholder="Phone" required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="" class="form-label">Service Type</label>
+                                    <select name="service_name" id="" required>
+                                        <option value="" disabled selected>Select one</option>
+
+                                        @foreach ($subcats as $subcat )
+                                            <option value="{{ $subcat->sub_cat_name }}">{{ $subcat->sub_cat_name }}</option>
+                                        @endforeach
+
+                                    </select>
+                                </div>
+
+                                <div class="form-grp">
+                                    <textarea name="message" placeholder="Type Your Message"></textarea>
+
                                 </div>
                                 <button type="submit" class="submit-btn text-center">Send Message</button>
                             </form>
